@@ -1,4 +1,4 @@
-# IP Subnet Calculator — IPv4 CIDR Network & Host Range
+# IP Subnet Calculator | IPv4 CIDR Network & Host Range
 
 > Calculate IPv4 CIDR subnet masks, network addresses, broadcast IPs, and usable host ranges online. Free, instant, and 100% client-side.
 
@@ -10,7 +10,7 @@
 
 ---
 
-## ⚡ Key Features
+## Features
 
 - **100% Client-Side & Offline:** Pure vanilla JavaScript runtime. Zero network uploads, zero telemetry, zero analytics tracking.
 - **Instant Processing:** Zero dependencies or heavy frameworks for ultra-fast, lightweight execution.
@@ -19,13 +19,13 @@
 
 ---
 
-## 📖 How It Works
+## How it works
 
 Enter an IP address with CIDR prefix (e.g. 192.168.1.100/24 or 10.0.0.0/16) to calculate netmask, broadcast address, and usable IP range.
 
 ---
 
-## 🛠️ Offline Chrome Extension Installation
+## Install the extension
 
 1. Download or clone this repository:
    ```bash
@@ -38,7 +38,7 @@ Enter an IP address with CIDR prefix (e.g. 192.168.1.100/24 or 10.0.0.0/16) to c
 
 ---
 
-## 💡 Frequently Asked Questions (FAQ)
+## FAQ
 
 ### Is my data uploaded to any server?
 No. Everything executes locally inside your browser memory or extension sandbox. No telemetry, third-party scripts, or API requests are made.
@@ -53,7 +53,7 @@ const engine = require('./core');
 
 ---
 
-## 📄 License & Author
+## License and support
 
 - **Author:** [jju1s](https://github.com/cig13zs)
 - **License:** [MIT License](LICENSE)

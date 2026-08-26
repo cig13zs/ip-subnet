@@ -158,7 +158,7 @@
         </div>
         <textarea id="output" readonly placeholder="Output will appear here..."></textarea>
         <div class="info-bar">
-          <span id="output-stats" role="status" aria-live="polite">Ready</span>
+          <span id="output-stats" role="status" aria-live="polite"></span>
         </div>
       </div>
     </div>
@@ -202,7 +202,7 @@ const statsEl = document.getElementById('output-stats') || document.getElementBy
 
 function process() {
   const txt = inputEl.value;
-  if (!txt.trim()) { outputEl.value = ''; if (statsEl) statsEl.textContent = 'Empty input'; return; }
+  if (!txt.trim()) { outputEl.value = ''; if (statsEl) statsEl.textContent = ''; return; }
   const res = IPSubnet.calculate(txt);
   outputEl.value = JSON.stringify(res, null, 2);
   if (statsEl) statsEl.textContent = res.error || `Network: ${res.networkAddress}/${res.prefix} (${res.usableHosts} usable hosts)`;
@@ -212,7 +212,7 @@ document.getElementById('btn-run').addEventListener('click', process);
 inputEl.addEventListener('input', process);
 document.getElementById('btn-sample').addEventListener('click', () => { inputEl.value = sample; process(); });
 document.getElementById('btn-copy').addEventListener('click', () => { navigator.clipboard.writeText(outputEl.value); alert('Copied subnet calculation!'); });
-if (document.getElementById('btn-clear')) document.getElementById('btn-clear').addEventListener('click', () => { inputEl.value = ''; outputEl.value = ''; });
+if (document.getElementById('btn-clear')) document.getElementById('btn-clear').addEventListener('click', () => { inputEl.value = ''; process(); });
 process();
 
 

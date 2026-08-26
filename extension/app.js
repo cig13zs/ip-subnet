@@ -6,7 +6,7 @@ const statsEl = document.getElementById('output-stats') || document.getElementBy
 
 function process() {
   const txt = inputEl.value;
-  if (!txt.trim()) { outputEl.value = ''; if (statsEl) statsEl.textContent = 'Empty input'; return; }
+  if (!txt.trim()) { outputEl.value = ''; if (statsEl) statsEl.textContent = ''; return; }
   const res = IPSubnet.calculate(txt);
   outputEl.value = JSON.stringify(res, null, 2);
   if (statsEl) statsEl.textContent = res.error || `Network: ${res.networkAddress}/${res.prefix} (${res.usableHosts} usable hosts)`;
